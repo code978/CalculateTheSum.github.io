@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+			background-color: #40E0D0;
+			transform-style: preserve-3d;
+		}
+		form{
+			margin-top: 50px;
+			margin-left: 11em;
+			perspective:1000vh;
+			font-size: 2.3em;
+			text-align: left;
+			transform-style: preserve-3d;
+		}
+		form label{
+			color: #dc2430;
+			text-align: center;
+			font-size: 1.3em;
+		}
+		form input{
+			font-size: 34px;
+			border-radius: 123px;
+			border:12px solid #fc00ff;
+			outline-style: none;
+			background-color: #40E0D0/*#FFB75E*//*#92FE9D*//*#00dbde*/;
+			transform-style: preserve-3d;
+			border-width: 11px;
+			padding-left: 25px;
+		}
+		.butt{
+			margin-left: 605px;
+			font-size: 34px;
+			outline: none;
+			border-radius: 34px;
+			outline-style: transparent;
+			background-color: blue;
+			transform-style: preserve-3d;
+			color: #40E0D0;
+			width: 15%;
+			height: 16%;
+		}
+		.head1{
+			text-align: center;
+			font-family: monospace;
+			font-size: 50px;
+			color: /*#8DC26F;*/#512DA8;
+			background-color: #ED8F03;
+		}
+		button{
+			margin-left: 45em;
+
+		}
+		.upper{
+			margin-top: 1em;
+			text-align: center;
+			font-family: monospace;
+			font-size: 50px;
+			width: 50%;
+			margin-left: 8em;
+			transform-style: preserve-3d;
+			color: /*#8DC26F;*/#512DA8;
+			background-color: #ED8F03;
+			border-radius: 40px;	
+		}
+		.upper:hover{
+			text-transform: uppercase;
+			text-decoration: underline;
+			letter-spacing: 3px;
+			color:#FFF94C/*#525252*/;
+		}
+
+		.para1{
+			text-align: right;
+			font-size: 2.9em;
+			margin-left: 65%;
+			display: inline;
+			font-family: monospace;
+		}
+		.para1:hover{
+			color:#525252;
+			text-align: center;
+			display: inline-grid;
+			text-transform: uppercase;
+		}
+		.head1:hover{
+			color: white;
+			/*animation: animate 2s linear infinite;*/
+		}/*
+		@keyframes animate{
+			0%{
+				font-size: 2px;
+				font-family: cursive;
+			}
+			50%{
+				font-size:5px;
+				font-family: monospace;
+			}
+			100%{
+				font-size: 10px;
+				font-family: sans-serif;
+			}
+		}*/
+
+	</style>
+	<title>Demo 3</title>
+</head>
+
+<body>
+	<h1 class="upper">Calculate the sum of Two Numbers </h1>
+	<form>
+		<label class="label1">Number 1: <br></label>
+		<input type="text" name="" id = "no1" placeholder="Enter The Number 1 : ">
+		<label class="label2"><br>Number 2: <br></label>
+		<input type="text" name="" id = "no2" placeholder="Enter The Number 2 : ">
+		</form>
+		<br>
+		<button id="btn" onclick="sum_of_two()" class="butt">Submit</button>
+
+		<h1 class="head1" id="head_id"></h1>	
+
+		<p class="para1">Created by Kunal Jain</p>
+
+		<script>
+			const sum_of_two = ()=>{
+				var number1 = document.getElementById('no1').value;
+				var number2 = document.getElementById('no2').value;
+				var sum = parseInt(number1) +parseInt(number2);
+
+				document.getElementById('head_id').innerHTML = "The Sum Of Two Number : "+  sum;
+			}
+
+		</script>
+
+</html>
